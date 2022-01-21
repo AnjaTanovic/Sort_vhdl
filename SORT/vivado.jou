@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jan 21 18:46:13 2022
+# Process ID: 10060
+# Current directory: D:/Anja/FAKULTET/Godina4/Semestar1/Projektovanje_slozenih_digitalnih_sistema/vezbe/v11/ip_sort/SORT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9856 D:\Anja\FAKULTET\Godina4\Semestar1\Projektovanje_slozenih_digitalnih_sistema\vezbe\v11\ip_sort\SORT\SORT.xpr
+# Log file: D:/Anja/FAKULTET/Godina4/Semestar1/Projektovanje_slozenih_digitalnih_sistema/vezbe/v11/ip_sort/SORT/vivado.log
+# Journal file: D:/Anja/FAKULTET/Godina4/Semestar1/Projektovanje_slozenih_digitalnih_sistema/vezbe/v11/ip_sort/SORT\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Anja/FAKULTET/Godina4/Semestar1/Projektovanje_slozenih_digitalnih_sistema/vezbe/v11/ip_sort/SORT/SORT.xpr
+update_compile_order -fileset sources_1

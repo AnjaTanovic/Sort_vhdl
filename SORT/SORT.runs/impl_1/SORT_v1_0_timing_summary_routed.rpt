@@ -1,0 +1,1333 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Jan 21 18:30:30 2022
+| Host         : Anja-Tanovic running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file SORT_v1_0_timing_summary_routed.rpt -pb SORT_v1_0_timing_summary_routed.pb -rpx SORT_v1_0_timing_summary_routed.rpx -warn_on_violation
+| Design       : SORT_v1_0
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (78)
+6. checking no_output_delay (101)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (78)
+-------------------------------
+ There are 78 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (101)
+---------------------------------
+ There are 101 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      7.386        0.000                      0                  396        0.101        0.000                      0                  396        9.500        0.000                       0                   269  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock         Waveform(ns)       Period(ns)      Frequency(MHz)
+-----         ------------       ----------      --------------
+s00_axi_aclk  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+s00_axi_aclk        7.386        0.000                      0                  396        0.101        0.000                      0                  396        9.500        0.000                       0                   269  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  s00_axi_aclk
+  To Clock:  s00_axi_aclk
+
+Setup :            0  Failing Endpoints,  Worst Slack        7.386ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.101ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             7.386ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/FSM_sequential_state_reg_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        12.499ns  (logic 4.896ns (39.173%)  route 7.603ns (60.827%))
+  Logic Levels:           11  (CARRY4=4 DSP48E1=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.711    10.328    sort_inst/CO[0]
+    SLICE_X11Y38         LUT6 (Prop_lut6_I5_O)        0.310    10.638 r  sort_inst/i_next0_i_17/O
+                         net (fo=3, routed)           1.017    11.655    sort_inst/i_next0_i_17_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I1_O)        0.124    11.779 r  sort_inst/FSM_sequential_state_reg[0]_i_12/O
+                         net (fo=1, routed)           0.000    11.779    sort_inst/FSM_sequential_state_reg[0]_i_12_n_0
+    SLICE_X10Y36         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    12.292 r  sort_inst/FSM_sequential_state_reg_reg[0]_i_4/CO[3]
+                         net (fo=1, routed)           0.000    12.292    sort_inst/FSM_sequential_state_reg_reg[0]_i_4_n_0
+    SLICE_X10Y37         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229    12.521 f  sort_inst/FSM_sequential_state_reg_reg[0]_i_2/CO[2]
+                         net (fo=1, routed)           0.309    12.830    sort_inst/state_next1
+    SLICE_X12Y37         LUT4 (Prop_lut4_I0_O)        0.310    13.140 r  sort_inst/FSM_sequential_state_reg[0]_i_1/O
+                         net (fo=1, routed)           0.332    13.472    sort_inst/state_next[0]
+    SLICE_X12Y37         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    SLICE_X12Y37         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[0]/C
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    SLICE_X12Y37         FDRE (Setup_fdre_C_D)       -0.031    20.858    sort_inst/FSM_sequential_state_reg_reg[0]
+  -------------------------------------------------------------------
+                         required time                         20.858    
+                         arrival time                         -13.472    
+  -------------------------------------------------------------------
+                         slack                                  7.386    
+
+Slack (MET) :             8.822ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_next0/C[30]
+                            (rising edge-triggered cell DSP48E1 clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.861ns  (logic 3.844ns (35.392%)  route 7.017ns (64.608%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 f  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.707    10.325    sort_inst/CO[0]
+    SLICE_X12Y37         LUT6 (Prop_lut6_I5_O)        0.310    10.635 r  sort_inst/i_next0_i_32/O
+                         net (fo=2, routed)           0.448    11.083    sort_inst/i_next0_i_32_n_0
+    SLICE_X11Y37         LUT5 (Prop_lut5_I4_O)        0.124    11.207 r  sort_inst/i_next0_i_1/O
+                         net (fo=2, routed)           0.627    11.834    sort_inst/i_next0_i_1_n_0
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/C[30]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/CLK
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    DSP48_X0Y14          DSP48E1 (Setup_dsp48e1_CLK_C[30])
+                                                     -0.233    20.656    sort_inst/i_next0
+  -------------------------------------------------------------------
+                         required time                         20.656    
+                         arrival time                         -11.834    
+  -------------------------------------------------------------------
+                         slack                                  8.822    
+
+Slack (MET) :             8.954ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_next0/C[18]
+                            (rising edge-triggered cell DSP48E1 clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.729ns  (logic 3.720ns (34.673%)  route 7.009ns (65.327%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.995    10.612    sort_inst/CO[0]
+    SLICE_X11Y38         LUT6 (Prop_lut6_I5_O)        0.310    10.922 r  sort_inst/i_next0_i_13/O
+                         net (fo=3, routed)           0.780    11.702    sort_inst/i_next0_i_13_n_0
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/C[18]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/CLK
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    DSP48_X0Y14          DSP48E1 (Setup_dsp48e1_CLK_C[18])
+                                                     -0.233    20.656    sort_inst/i_next0
+  -------------------------------------------------------------------
+                         required time                         20.656    
+                         arrival time                         -11.702    
+  -------------------------------------------------------------------
+                         slack                                  8.954    
+
+Slack (MET) :             9.155ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_next0/C[13]
+                            (rising edge-triggered cell DSP48E1 clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.528ns  (logic 3.720ns (35.335%)  route 6.808ns (64.665%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          1.014    10.631    sort_inst/CO[0]
+    SLICE_X10Y38         LUT6 (Prop_lut6_I5_O)        0.310    10.941 r  sort_inst/i_next0_i_18/O
+                         net (fo=3, routed)           0.559    11.501    sort_inst/i_next0_i_18_n_0
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/C[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/CLK
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    DSP48_X0Y14          DSP48E1 (Setup_dsp48e1_CLK_C[13])
+                                                     -0.233    20.656    sort_inst/i_next0
+  -------------------------------------------------------------------
+                         required time                         20.656    
+                         arrival time                         -11.501    
+  -------------------------------------------------------------------
+                         slack                                  9.155    
+
+Slack (MET) :             9.242ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_reg_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.613ns  (logic 3.844ns (36.218%)  route 6.769ns (63.782%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 f  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.707    10.325    sort_inst/CO[0]
+    SLICE_X12Y37         LUT6 (Prop_lut6_I5_O)        0.310    10.635 r  sort_inst/i_next0_i_32/O
+                         net (fo=2, routed)           0.448    11.083    sort_inst/i_next0_i_32_n_0
+    SLICE_X11Y37         LUT5 (Prop_lut5_I4_O)        0.124    11.207 r  sort_inst/i_next0_i_1/O
+                         net (fo=2, routed)           0.379    11.586    sort_inst/i_next0_i_1_n_0
+    SLICE_X11Y37         FDRE                                         r  sort_inst/i_reg_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    SLICE_X11Y37         FDRE                                         r  sort_inst/i_reg_reg[30]/C
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    SLICE_X11Y37         FDRE (Setup_fdre_C_D)       -0.061    20.828    sort_inst/i_reg_reg[30]
+  -------------------------------------------------------------------
+                         required time                         20.828    
+                         arrival time                         -11.586    
+  -------------------------------------------------------------------
+                         slack                                  9.242    
+
+Slack (MET) :             9.267ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_reg_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.568ns  (logic 3.720ns (35.201%)  route 6.848ns (64.799%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.995    10.612    sort_inst/CO[0]
+    SLICE_X11Y38         LUT6 (Prop_lut6_I5_O)        0.310    10.922 r  sort_inst/i_next0_i_13/O
+                         net (fo=3, routed)           0.618    11.541    sort_inst/i_next0_i_13_n_0
+    SLICE_X11Y38         FDRE                                         r  sort_inst/i_reg_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    SLICE_X11Y38         FDRE                                         r  sort_inst/i_reg_reg[18]/C
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    SLICE_X11Y38         FDRE (Setup_fdre_C_D)       -0.081    20.808    sort_inst/i_reg_reg[18]
+  -------------------------------------------------------------------
+                         required time                         20.808    
+                         arrival time                         -11.541    
+  -------------------------------------------------------------------
+                         slack                                  9.267    
+
+Slack (MET) :             9.289ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_reg_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.582ns  (logic 3.720ns (35.155%)  route 6.862ns (64.845%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          1.014    10.631    sort_inst/CO[0]
+    SLICE_X10Y38         LUT6 (Prop_lut6_I5_O)        0.310    10.941 r  sort_inst/i_next0_i_18/O
+                         net (fo=3, routed)           0.613    11.555    sort_inst/i_next0_i_18_n_0
+    SLICE_X10Y38         FDRE                                         r  sort_inst/i_reg_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    SLICE_X10Y38         FDRE                                         r  sort_inst/i_reg_reg[13]/C
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    SLICE_X10Y38         FDRE (Setup_fdre_C_D)       -0.045    20.844    sort_inst/i_reg_reg[13]
+  -------------------------------------------------------------------
+                         required time                         20.844    
+                         arrival time                         -11.555    
+  -------------------------------------------------------------------
+                         slack                                  9.289    
+
+Slack (MET) :             9.300ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_next0/C[12]
+                            (rising edge-triggered cell DSP48E1 clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.383ns  (logic 3.720ns (35.826%)  route 6.663ns (64.174%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.815    10.433    sort_inst/CO[0]
+    SLICE_X10Y38         LUT6 (Prop_lut6_I5_O)        0.310    10.743 r  sort_inst/i_next0_i_19/O
+                         net (fo=3, routed)           0.614    11.356    sort_inst/i_next0_i_19_n_0
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/C[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/CLK
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    DSP48_X0Y14          DSP48E1 (Setup_dsp48e1_CLK_C[12])
+                                                     -0.233    20.656    sort_inst/i_next0
+  -------------------------------------------------------------------
+                         required time                         20.656    
+                         arrival time                         -11.356    
+  -------------------------------------------------------------------
+                         slack                                  9.300    
+
+Slack (MET) :             9.306ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_next0/C[10]
+                            (rising edge-triggered cell DSP48E1 clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.377ns  (logic 3.720ns (35.849%)  route 6.657ns (64.151%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.808    10.426    sort_inst/CO[0]
+    SLICE_X11Y37         LUT6 (Prop_lut6_I5_O)        0.310    10.736 r  sort_inst/i_next0_i_21/O
+                         net (fo=3, routed)           0.614    11.350    sort_inst/i_next0_i_21_n_0
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/C[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/CLK
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    DSP48_X0Y14          DSP48E1 (Setup_dsp48e1_CLK_C[10])
+                                                     -0.233    20.656    sort_inst/i_next0
+  -------------------------------------------------------------------
+                         required time                         20.656    
+                         arrival time                         -11.350    
+  -------------------------------------------------------------------
+                         slack                                  9.306    
+
+Slack (MET) :             9.316ns  (required time - arrival time)
+  Source:                 sort_inst/FSM_sequential_state_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/i_next0/C[24]
+                            (rising edge-triggered cell DSP48E1 clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (s00_axi_aclk rise@20.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        10.367ns  (logic 3.720ns (35.883%)  route 6.647ns (64.117%))
+  Logic Levels:           7  (CARRY4=2 DSP48E1=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.973     0.973    sort_inst/s00_axi_aclk
+    SLICE_X14Y42         FDRE                                         r  sort_inst/FSM_sequential_state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y42         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  sort_inst/FSM_sequential_state_reg_reg[3]/Q
+                         net (fo=171, routed)         2.539     3.968    sort_inst/state_reg[3]
+    SLICE_X12Y30         LUT6 (Prop_lut6_I2_O)        0.124     4.092 r  sort_inst/j_next0_i_24/O
+                         net (fo=1, routed)           0.549     4.642    sort_inst/j_next0_i_24_n_0
+    DSP48_X0Y12          DSP48E1 (Prop_dsp48e1_C[7]_P[17])
+                                                      1.820     6.462 r  sort_inst/j_next0/P[17]
+                         net (fo=1, routed)           1.172     7.634    sort_inst/j_next0_n_88
+    SLICE_X13Y36         LUT6 (Prop_lut6_I0_O)        0.124     7.758 r  sort_inst/j_reg[17]_i_1/O
+                         net (fo=2, routed)           0.974     8.732    SORT_v1_0_S00_AXI_inst/D[17]
+    SLICE_X12Y33         LUT6 (Prop_lut6_I1_O)        0.124     8.856 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11/O
+                         net (fo=1, routed)           0.000     8.856    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg[1]_i_11_n_0
+    SLICE_X12Y33         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.389 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     9.389    SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_4_n_0
+    SLICE_X12Y34         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     9.618 r  SORT_v1_0_S00_AXI_inst/FSM_sequential_state_reg_reg[1]_i_3/CO[2]
+                         net (fo=35, routed)          0.882    10.500    sort_inst/CO[0]
+    SLICE_X8Y36          LUT6 (Prop_lut6_I5_O)        0.310    10.810 r  sort_inst/i_next0_i_7/O
+                         net (fo=3, routed)           0.530    11.340    sort_inst/i_next0_i_7_n_0
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/C[24]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                     20.000    20.000 r  
+                                                      0.000    20.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.924    20.924    sort_inst/s00_axi_aclk
+    DSP48_X0Y14          DSP48E1                                      r  sort_inst/i_next0/CLK
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    DSP48_X0Y14          DSP48E1 (Setup_dsp48e1_CLK_C[24])
+                                                     -0.233    20.656    sort_inst/i_next0
+  -------------------------------------------------------------------
+                         required time                         20.656    
+                         arrival time                         -11.340    
+  -------------------------------------------------------------------
+                         slack                                  9.316    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.101ns  (arrival time - required time)
+  Source:                 SORT_v1_0_S00_AXI_inst/slv_reg2_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SORT_v1_0_S00_AXI_inst/axi_rdata_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.186ns (76.826%)  route 0.056ns (23.173%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X17Y33         FDRE                                         r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y33         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[12]/Q
+                         net (fo=1, routed)           0.056     0.607    SORT_v1_0_S00_AXI_inst/slv_reg2[12]
+    SLICE_X16Y33         LUT5 (Prop_lut5_I4_O)        0.045     0.652 r  SORT_v1_0_S00_AXI_inst/axi_rdata[12]_i_1/O
+                         net (fo=1, routed)           0.000     0.652    SORT_v1_0_S00_AXI_inst/reg_data_out[12]
+    SLICE_X16Y33         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X16Y33         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[12]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X16Y33         FDRE (Hold_fdre_C_D)         0.120     0.552    SORT_v1_0_S00_AXI_inst/axi_rdata_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.652    
+  -------------------------------------------------------------------
+                         slack                                  0.101    
+
+Slack (MET) :             0.130ns  (arrival time - required time)
+  Source:                 SORT_v1_0_S00_AXI_inst/slv_reg2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SORT_v1_0_S00_AXI_inst/axi_rdata_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.243ns  (logic 0.186ns (76.391%)  route 0.057ns (23.609%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X15Y32         FDRE                                         r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y32         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[2]/Q
+                         net (fo=1, routed)           0.057     0.609    SORT_v1_0_S00_AXI_inst/slv_reg2[2]
+    SLICE_X14Y32         LUT5 (Prop_lut5_I4_O)        0.045     0.654 r  SORT_v1_0_S00_AXI_inst/axi_rdata[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.654    SORT_v1_0_S00_AXI_inst/reg_data_out[2]
+    SLICE_X14Y32         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X14Y32         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[2]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X14Y32         FDRE (Hold_fdre_C_D)         0.092     0.524    SORT_v1_0_S00_AXI_inst/axi_rdata_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.524    
+                         arrival time                           0.654    
+  -------------------------------------------------------------------
+                         slack                                  0.130    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 SORT_v1_0_S00_AXI_inst/slv_reg2_reg[26]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SORT_v1_0_S00_AXI_inst/axi_rdata_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.244ns  (logic 0.186ns (76.078%)  route 0.058ns (23.922%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X15Y36         FDRE                                         r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y36         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[26]/Q
+                         net (fo=1, routed)           0.058     0.610    SORT_v1_0_S00_AXI_inst/slv_reg2[26]
+    SLICE_X14Y36         LUT5 (Prop_lut5_I4_O)        0.045     0.655 r  SORT_v1_0_S00_AXI_inst/axi_rdata[26]_i_1/O
+                         net (fo=1, routed)           0.000     0.655    SORT_v1_0_S00_AXI_inst/reg_data_out[26]
+    SLICE_X14Y36         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X14Y36         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[26]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X14Y36         FDRE (Hold_fdre_C_D)         0.091     0.523    SORT_v1_0_S00_AXI_inst/axi_rdata_reg[26]
+  -------------------------------------------------------------------
+                         required time                         -0.523    
+                         arrival time                           0.655    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 sort_inst/x_out2_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/x_out1_reg_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.285ns  (logic 0.186ns (65.209%)  route 0.099ns (34.791%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    sort_inst/s00_axi_aclk
+    SLICE_X17Y41         FDRE                                         r  sort_inst/x_out2_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y41         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  sort_inst/x_out2_reg_reg[4]/Q
+                         net (fo=6, routed)           0.099     0.650    sort_inst/x_out2_reg[4]
+    SLICE_X16Y41         LUT3 (Prop_lut3_I1_O)        0.045     0.695 r  sort_inst/x_out1_reg[4]_i_1/O
+                         net (fo=1, routed)           0.000     0.695    sort_inst/x_out1_reg[4]_i_1_n_0
+    SLICE_X16Y41         FDRE                                         r  sort_inst/x_out1_reg_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    sort_inst/s00_axi_aclk
+    SLICE_X16Y41         FDRE                                         r  sort_inst/x_out1_reg_reg[4]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X16Y41         FDRE (Hold_fdre_C_D)         0.120     0.552    sort_inst/x_out1_reg_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.695    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.155ns  (arrival time - required time)
+  Source:                 sort_inst/x_out1_reg_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/x_out2_reg_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.296ns  (logic 0.186ns (62.752%)  route 0.110ns (37.248%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    sort_inst/s00_axi_aclk
+    SLICE_X17Y44         FDRE                                         r  sort_inst/x_out1_reg_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y44         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  sort_inst/x_out1_reg_reg[24]/Q
+                         net (fo=6, routed)           0.110     0.662    sort_inst/x_out1_reg[24]
+    SLICE_X16Y44         LUT3 (Prop_lut3_I1_O)        0.045     0.707 r  sort_inst/x_out2_reg[24]_i_1/O
+                         net (fo=1, routed)           0.000     0.707    sort_inst/x_out2_reg[24]_i_1_n_0
+    SLICE_X16Y44         FDRE                                         r  sort_inst/x_out2_reg_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    sort_inst/s00_axi_aclk
+    SLICE_X16Y44         FDRE                                         r  sort_inst/x_out2_reg_reg[24]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X16Y44         FDRE (Hold_fdre_C_D)         0.120     0.552    sort_inst/x_out2_reg_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.707    
+  -------------------------------------------------------------------
+                         slack                                  0.155    
+
+Slack (MET) :             0.156ns  (arrival time - required time)
+  Source:                 sort_inst/x_out2_reg_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/x_out1_reg_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.297ns  (logic 0.186ns (62.534%)  route 0.111ns (37.466%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    sort_inst/s00_axi_aclk
+    SLICE_X17Y43         FDRE                                         r  sort_inst/x_out2_reg_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y43         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  sort_inst/x_out2_reg_reg[16]/Q
+                         net (fo=6, routed)           0.111     0.663    sort_inst/x_out2_reg[16]
+    SLICE_X16Y43         LUT3 (Prop_lut3_I1_O)        0.045     0.708 r  sort_inst/x_out1_reg[16]_i_1/O
+                         net (fo=1, routed)           0.000     0.708    sort_inst/x_out1_reg[16]_i_1_n_0
+    SLICE_X16Y43         FDRE                                         r  sort_inst/x_out1_reg_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    sort_inst/s00_axi_aclk
+    SLICE_X16Y43         FDRE                                         r  sort_inst/x_out1_reg_reg[16]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X16Y43         FDRE (Hold_fdre_C_D)         0.120     0.552    sort_inst/x_out1_reg_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.708    
+  -------------------------------------------------------------------
+                         slack                                  0.156    
+
+Slack (MET) :             0.157ns  (arrival time - required time)
+  Source:                 SORT_v1_0_S00_AXI_inst/slv_reg2_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SORT_v1_0_S00_AXI_inst/axi_rdata_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.299ns  (logic 0.186ns (62.194%)  route 0.113ns (37.806%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X15Y32         FDRE                                         r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y32         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  SORT_v1_0_S00_AXI_inst/slv_reg2_reg[3]/Q
+                         net (fo=1, routed)           0.113     0.664    SORT_v1_0_S00_AXI_inst/slv_reg2[3]
+    SLICE_X16Y32         LUT5 (Prop_lut5_I4_O)        0.045     0.709 r  SORT_v1_0_S00_AXI_inst/axi_rdata[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.709    SORT_v1_0_S00_AXI_inst/reg_data_out[3]
+    SLICE_X16Y32         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X16Y32         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[3]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X16Y32         FDRE (Hold_fdre_C_D)         0.120     0.552    SORT_v1_0_S00_AXI_inst/axi_rdata_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.709    
+  -------------------------------------------------------------------
+                         slack                                  0.157    
+
+Slack (MET) :             0.158ns  (arrival time - required time)
+  Source:                 sort_inst/x_out2_reg_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/x_out1_reg_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.300ns  (logic 0.186ns (61.929%)  route 0.114ns (38.071%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    sort_inst/s00_axi_aclk
+    SLICE_X17Y42         FDRE                                         r  sort_inst/x_out2_reg_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y42         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  sort_inst/x_out2_reg_reg[8]/Q
+                         net (fo=6, routed)           0.114     0.665    sort_inst/x_out2_reg[8]
+    SLICE_X16Y42         LUT3 (Prop_lut3_I1_O)        0.045     0.710 r  sort_inst/x_out1_reg[8]_i_1/O
+                         net (fo=1, routed)           0.000     0.710    sort_inst/x_out1_reg[8]_i_1_n_0
+    SLICE_X16Y42         FDRE                                         r  sort_inst/x_out1_reg_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    sort_inst/s00_axi_aclk
+    SLICE_X16Y42         FDRE                                         r  sort_inst/x_out1_reg_reg[8]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X16Y42         FDRE (Hold_fdre_C_D)         0.121     0.553    sort_inst/x_out1_reg_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -0.553    
+                         arrival time                           0.710    
+  -------------------------------------------------------------------
+                         slack                                  0.158    
+
+Slack (MET) :             0.159ns  (arrival time - required time)
+  Source:                 SORT_v1_0_S00_AXI_inst/slv_reg0_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SORT_v1_0_S00_AXI_inst/axi_rdata_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.272ns  (logic 0.186ns (68.463%)  route 0.086ns (31.537%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X14Y35         FDRE                                         r  SORT_v1_0_S00_AXI_inst/slv_reg0_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y35         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  SORT_v1_0_S00_AXI_inst/slv_reg0_reg[24]/Q
+                         net (fo=1, routed)           0.086     0.637    SORT_v1_0_S00_AXI_inst/slv_reg0[24]
+    SLICE_X15Y35         LUT5 (Prop_lut5_I1_O)        0.045     0.682 r  SORT_v1_0_S00_AXI_inst/axi_rdata[24]_i_1/O
+                         net (fo=1, routed)           0.000     0.682    SORT_v1_0_S00_AXI_inst/reg_data_out[24]
+    SLICE_X15Y35         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    SORT_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X15Y35         FDRE                                         r  SORT_v1_0_S00_AXI_inst/axi_rdata_reg[24]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X15Y35         FDRE (Hold_fdre_C_D)         0.091     0.523    SORT_v1_0_S00_AXI_inst/axi_rdata_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -0.523    
+                         arrival time                           0.682    
+  -------------------------------------------------------------------
+                         slack                                  0.159    
+
+Slack (MET) :             0.167ns  (arrival time - required time)
+  Source:                 sort_inst/x_out1_reg_reg[26]/C
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            sort_inst/x_out2_reg_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by s00_axi_aclk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             s00_axi_aclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (s00_axi_aclk rise@0.000ns - s00_axi_aclk rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.186ns (60.284%)  route 0.123ns (39.716%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.410     0.410    sort_inst/s00_axi_aclk
+    SLICE_X21Y44         FDRE                                         r  sort_inst/x_out1_reg_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y44         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  sort_inst/x_out1_reg_reg[26]/Q
+                         net (fo=6, routed)           0.123     0.674    sort_inst/x_out1_reg[26]
+    SLICE_X20Y44         LUT3 (Prop_lut3_I1_O)        0.045     0.719 r  sort_inst/x_out2_reg[26]_i_1/O
+                         net (fo=1, routed)           0.000     0.719    sort_inst/x_out2_reg[26]_i_1_n_0
+    SLICE_X20Y44         FDRE                                         r  sort_inst/x_out2_reg_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock s00_axi_aclk rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  s00_axi_aclk (IN)
+                         net (fo=269, unset)          0.432     0.432    sort_inst/s00_axi_aclk
+    SLICE_X20Y44         FDRE                                         r  sort_inst/x_out2_reg_reg[26]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X20Y44         FDRE (Hold_fdre_C_D)         0.120     0.552    sort_inst/x_out2_reg_reg[26]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.719    
+  -------------------------------------------------------------------
+                         slack                                  0.167    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         s00_axi_aclk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { s00_axi_aclk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     FDSE/C   n/a            1.000         20.000      19.000     SLICE_X18Y36  SORT_v1_0_S00_AXI_inst/aw_en_reg/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_arready_reg/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X17Y36  SORT_v1_0_S00_AXI_inst/axi_awaddr_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X17Y36  SORT_v1_0_S00_AXI_inst/axi_awaddr_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X18Y36  SORT_v1_0_S00_AXI_inst/axi_awready_reg/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X18Y40  sort_inst/x_out1_reg_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X20Y43  sort_inst/x_out1_reg_reg[10]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X20Y43  sort_inst/x_out1_reg_reg[11]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         10.000      9.500      SLICE_X18Y36  SORT_v1_0_S00_AXI_inst/aw_en_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[2]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_arready_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X17Y36  SORT_v1_0_S00_AXI_inst/axi_awaddr_reg[2]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X17Y36  SORT_v1_0_S00_AXI_inst/axi_awaddr_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X18Y36  SORT_v1_0_S00_AXI_inst/axi_awready_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X18Y40  sort_inst/x_out1_reg_reg[0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X20Y43  sort_inst/x_out1_reg_reg[10]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X20Y43  sort_inst/x_out1_reg_reg[11]/C
+High Pulse Width  Slow    FDSE/C   n/a            0.500         10.000      9.500      SLICE_X18Y36  SORT_v1_0_S00_AXI_inst/aw_en_reg/C
+High Pulse Width  Fast    FDSE/C   n/a            0.500         10.000      9.500      SLICE_X18Y36  SORT_v1_0_S00_AXI_inst/aw_en_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[2]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[2]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[3]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_araddr_reg[3]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_arready_reg/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X16Y35  SORT_v1_0_S00_AXI_inst/axi_arready_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X17Y36  SORT_v1_0_S00_AXI_inst/axi_awaddr_reg[2]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X17Y36  SORT_v1_0_S00_AXI_inst/axi_awaddr_reg[2]/C
+
+
+
